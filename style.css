@@ -212,11 +212,13 @@ section {
   position: absolute;
   z-index: 0;
   left: 50%;
-  bottom: -6px;
+  bottom: 0;
   transform: translateX(-50%);
-  width: min(70%, 620px);
-  opacity: 0.18;
-  filter: grayscale(1) brightness(1.6);
+  width: min(95%, 950px);
+  height: 150px;
+  object-fit: cover;
+  object-position: bottom;
+  opacity: 0.95;
   pointer-events: none;
 }
 
