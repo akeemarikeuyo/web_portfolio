@@ -180,10 +180,44 @@ section {
 }
 
 .hero_container {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
+}
+
+.cloud {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.22;
+  filter: grayscale(1) brightness(2.2);
+  pointer-events: none;
+}
+
+.cloud1 {
+  left: 6%;
+  top: 18%;
+  width: 90px;
+}
+
+.cloud2 {
+  right: 10%;
+  top: 8%;
+  width: 70px;
+}
+
+.mountain {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: min(70%, 620px);
+  opacity: 0.18;
+  filter: grayscale(1) brightness(1.6);
+  pointer-events: none;
 }
 
 .hero_text .eyebrow {
@@ -230,6 +264,7 @@ section {
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 50% 18%;
   border: 3px solid var(--accent);
   box-shadow: 0 0 0 10px rgba(45, 212, 191, 0.08);
 }
