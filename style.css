@@ -170,7 +170,7 @@ section {
 
 .hero {
   position: relative;
-  padding: 96px 0 72px;
+  padding: 96px 0 150px;
   background-image: radial-gradient(circle at 15% 20%, rgba(45, 212, 191, 0.12), transparent 40%),
     radial-gradient(circle at 85% 0%, rgba(45, 212, 191, 0.08), transparent 45%),
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
@@ -214,8 +214,8 @@ section {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: min(95%, 950px);
-  height: 150px;
+  width: min(70%, 700px);
+  height: 90px;
   object-fit: cover;
   object-position: bottom;
   opacity: 0.95;
