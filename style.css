@@ -494,6 +494,85 @@ section {
   border: 0;
 }
 
+/* ---------- Publications (research.html) ---------- */
+
+.pub_grid {
+  display: grid;
+  gap: 24px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.pub_card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.pub_card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.pub_meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-published {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #06201c;
+  font-weight: 700;
+}
+
+.badge-preprint {
+  background: transparent;
+}
+
+.pub_date {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.pub_card h3 {
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.pub_authors {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.pub_authors strong {
+  color: var(--text);
+}
+
+.pub_venue {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.pub_card > p:not(.pub_authors):not(.pub_venue) {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.note_card {
+  max-width: 820px;
+  margin: 32px auto 0;
+  text-align: center;
+  background: var(--surface-alt);
+}
+
 /* ---------- Contact ---------- */
 
 .contact_card {
