@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akeemarikeuyo.github.io/web_portfolio/sitemap.xml
