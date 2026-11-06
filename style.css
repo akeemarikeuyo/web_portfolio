@@ -72,6 +72,7 @@ a {
   * {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
   }
 }
 
@@ -796,8 +797,22 @@ section {
 
 .contact_socials {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 18px;
+  gap: 8px;
+}
+
+.contact_socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.contact_socials a:hover {
+  background: var(--surface-alt);
 }
 
 .contact_socials svg {
@@ -824,13 +839,54 @@ section {
 
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(14px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Cascading stagger for grouped cards entering together */
+.skills_grid > .reveal:nth-child(1),
+.projects_grid > .reveal:nth-child(1),
+.pub_grid > .reveal:nth-child(1),
+.timeline > .reveal:nth-child(1),
+.testimonial_grid > .reveal:nth-child(1) {
+  transition-delay: 0ms;
+}
+.skills_grid > .reveal:nth-child(2),
+.projects_grid > .reveal:nth-child(2),
+.pub_grid > .reveal:nth-child(2),
+.timeline > .reveal:nth-child(2),
+.testimonial_grid > .reveal:nth-child(2) {
+  transition-delay: 60ms;
+}
+.skills_grid > .reveal:nth-child(3),
+.projects_grid > .reveal:nth-child(3),
+.pub_grid > .reveal:nth-child(3),
+.timeline > .reveal:nth-child(3),
+.testimonial_grid > .reveal:nth-child(3) {
+  transition-delay: 120ms;
+}
+.skills_grid > .reveal:nth-child(4),
+.projects_grid > .reveal:nth-child(4),
+.pub_grid > .reveal:nth-child(4),
+.timeline > .reveal:nth-child(4),
+.testimonial_grid > .reveal:nth-child(4) {
+  transition-delay: 180ms;
+}
+.skills_grid > .reveal:nth-child(5),
+.projects_grid > .reveal:nth-child(5),
+.pub_grid > .reveal:nth-child(5),
+.timeline > .reveal:nth-child(5) {
+  transition-delay: 240ms;
+}
+.skills_grid > .reveal:nth-child(6),
+.projects_grid > .reveal:nth-child(6),
+.timeline > .reveal:nth-child(6) {
+  transition-delay: 300ms;
 }
 
 /* ---------- Mobile nav ---------- */
