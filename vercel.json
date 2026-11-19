@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/omafit", "destination": "https://omafitwaitlist.vercel.app/omafit" },
+    { "source": "/omafit/:path*", "destination": "https://omafitwaitlist.vercel.app/omafit/:path*" }
+  ]
+}
